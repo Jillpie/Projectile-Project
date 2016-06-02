@@ -12,7 +12,7 @@ int BESTANGLETHRESHPOT = 100;
 
 //Functions:
 
-void simpleAngleControl{
+void simpleAngleControl(){
 	if(SensorValue(buttonUpAngle) == 1){
 		startMotor(motorAngle,-MOTORMAXPOWER);
 	}
@@ -24,7 +24,7 @@ void simpleAngleControl{
 	}
 }
 
-void simpleComplexAngleControl{
+void simpleComplexAngleControl(){
 	if(SensorValue(potAngle) < BESTANGLEPOT - BESTANGLETHRESHPOT){
 		startMotor(motorAngle,MOTORCALIPOWER);
 	}
@@ -36,7 +36,7 @@ void simpleComplexAngleControl{
 	}
 }
 
-void simpleComplexAngleControlCali{
+void simpleComplexAngleControlCali(){
 	if(SensorValue(buttonUpAngle) == 1){
 		startMotor(motorAngle,-MOTORCALIPOWER);
 	}
@@ -48,7 +48,7 @@ void simpleComplexAngleControlCali{
 	}
 }
 
-void launcherKick{
+void launcherKick(){
 	if(SensorValue(limitLaunch) == 1){
 		startMotor(motorLaunch,MOTORMAXPOWER);
 	}
